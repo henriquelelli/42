@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hcesar-l <hcesar-l@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/17 21:54:20 by hcesar-l          #+#    #+#             */
-/*   Updated: 2022/05/17 21:55:35 by hcesar-l         ###   ########.fr       */
+/*   Created: 2022/05/19 22:50:40 by hcesar-l          #+#    #+#             */
+/*   Updated: 2022/05/19 22:55:37 by hcesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_print_alphabet(void)
+int	ft_strlen(char *str)
 {
-	char	c;
+	int	count;
 
-	c = 'a';
-	while (c <= 'z')
-		ft_putchar(c++);
+	count = 0;
+	while (*str++)
+		count++;
+	return (count);
 }

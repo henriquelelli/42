@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hcesar-l <hcesar-l@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/17 21:54:20 by hcesar-l          #+#    #+#             */
-/*   Updated: 2022/05/17 21:55:35 by hcesar-l         ###   ########.fr       */
+/*   Created: 2022/05/19 23:01:03 by hcesar-l          #+#    #+#             */
+/*   Updated: 2022/05/20 15:53:31 by hcesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <stdio.h>
+#include <string.h>
 
-void	ft_print_alphabet(void)
+int	ft_strcmp(char *s1, char *s2);
+
+int	main(void)
 {
-	char	c;
+	char	*a;
+	char	*b;
 
-	c = 'a';
-	while (c <= 'z')
-		ft_putchar(c++);
+	a = "Henrique";
+	b = "HenriqueL";
+	printf("ft_strcmp = %d\n", ft_strcmp(b, a));
+	printf("strcmp = %d\n", strcmp(b, a));
 }

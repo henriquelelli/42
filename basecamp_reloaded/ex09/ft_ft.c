@@ -1,22 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hcesar-l <hcesar-l@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/17 21:54:20 by hcesar-l          #+#    #+#             */
-/*   Updated: 2022/05/17 21:55:35 by hcesar-l         ###   ########.fr       */
+/*   Created: 2022/05/18 19:53:01 by hcesar-l          #+#    #+#             */
+/*   Updated: 2022/05/18 19:57:19 by hcesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_print_alphabet(void)
+void	ft_ft(int *nbr)
 {
-	char	c;
-
-	c = 'a';
-	while (c <= 'z')
-		ft_putchar(c++);
+	*nbr = 42;
 }

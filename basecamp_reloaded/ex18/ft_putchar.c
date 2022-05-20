@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hcesar-l <hcesar-l@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/17 21:54:20 by hcesar-l          #+#    #+#             */
-/*   Updated: 2022/05/17 21:55:35 by hcesar-l         ###   ########.fr       */
+/*   Created: 2022/05/19 22:49:28 by hcesar-l          #+#    #+#             */
+/*   Updated: 2022/05/19 22:49:30 by hcesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <unistd.h>
 
-void	ft_print_alphabet(void)
+void	ft_putchar(char c)
 {
-	char	c;
-
-	c = 'a';
-	while (c <= 'z')
-		ft_putchar(c++);
+	write(1, &c, 1);
 }

@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hcesar-l <hcesar-l@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/17 21:54:20 by hcesar-l          #+#    #+#             */
-/*   Updated: 2022/05/17 21:55:35 by hcesar-l         ###   ########.fr       */
+/*   Created: 2022/05/18 22:03:40 by hcesar-l          #+#    #+#             */
+/*   Updated: 2022/05/18 22:04:14 by hcesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <stdio.h>
 
-void	ft_print_alphabet(void)
+int	ft_sqrt(int nb);
+
+int	main(void)
 {
-	char	c;
-
-	c = 'a';
-	while (c <= 'z')
-		ft_putchar(c++);
+	printf("the sqrt of 2147395600 is = %d\n", ft_sqrt(2147395600));
 }
