@@ -6,7 +6,7 @@
 /*   By: hcesar-l <hcesar-l@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:45:08 by hcesar-l          #+#    #+#             */
-/*   Updated: 2022/06/02 20:06:06 by hcesar-l         ###   ########.fr       */
+/*   Updated: 2022/06/02 22:17:44 by hcesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 size_t	ft_strlen(const char *str);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 void	test_ft_isalpha(void)
 {
@@ -168,8 +169,15 @@ void	test_ft_strncmp(void)
 
 	test1 = "Henrique";
 	test2 = "HenriqueL";
-	printf("strncmp = %i\n", strncmp(test1, test2, 9));
+	if (ft_strncmp(test1, test2, 9) != strncmp(test1, test2, 9))
+	{
+		printf("erro strncmp\n");
+		printf("ft_strncmp = %i strncmp = %i\n", ft_strncmp(test1, test2, 9), strncmp(test1, test2, 9));
+	}
+	else
+		printf("ft_strncmp - OK\n");
 }
+
 int	main(void)
 {
 	test_ft_isalpha();
