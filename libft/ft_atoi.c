@@ -6,7 +6,7 @@
 /*   By: hcesar-l <hcesar-l@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 18:50:52 by hcesar-l          #+#    #+#             */
-/*   Updated: 2022/06/18 19:15:04 by hcesar-l         ###   ########.fr       */
+/*   Updated: 2022/06/18 19:30:36 by hcesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 static	int	ft_isspace(char c)
 {
-	return (( c == '\t'
-		|| c == '\v'
-		|| c == '\r'
-		|| c == '\n'
-		|| c == '\f'
-		|| c == ' '));
+	return ((c == '\t'
+			|| c == '\v'
+			|| c == '\r'
+			|| c == '\n'
+			|| c == '\f'
+			|| c == ' '));
 }
 
 int	ft_atoi(const char *nptr)
