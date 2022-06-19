@@ -5,9 +5,11 @@ SRC = 	ft_atoi.c\
 		ft_isalpha.c\
 		ft_isascii.c\
 		ft_isdigit.c\
+		ft_memset.c\
 		ft_putchar_fd.c\
 		ft_strlen.c\
-		ft_strncmp.c
+		ft_strncmp.c\
+		ft_bzero.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -26,7 +28,7 @@ clean:
 	rm -rf $(OBJ)
 
 fclean: clean
-	rm -rf $(NAME)
+	rm -rf $(NAME) a.out
 
 re: fclean all
 
