@@ -6,7 +6,7 @@
 /*   By: hcesar-l <hcesar-l@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:45:08 by hcesar-l          #+#    #+#             */
-/*   Updated: 2022/06/02 22:17:44 by hcesar-l         ###   ########.fr       */
+/*   Updated: 2022/06/19 01:44:44 by hcesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-size_t	ft_strlen(const char *str);
-int		ft_strncmp(const char *s1, const char *s2, size_t n);
+#include "libft.h"
 
 void	test_ft_isalpha(void)
 {
@@ -178,12 +172,37 @@ void	test_ft_strncmp(void)
 		printf("ft_strncmp - OK\n");
 }
 
+void	test_ft_bzero(void)
+{
+	char c[] = "Teste";
+	size_t	i = 0;
+	
+	i = ft_strlen(c);
+	while (i)
+		{
+			ft_putchar_fd(c[i], 1);
+			i--;
+		}
+	i = ft_strlen(c);
+	ft_putchar_fd('\n', 1);
+	ft_bzero(c, i);
+	while (i)
+		{
+			if(c[i] == 0)
+				ft_putchar_fd('x', 1);
+			i--;
+		}
+	ft_putchar_fd('\n', 1);
+}
+
 int	main(void)
 {
+	test_ft_bzero();
 	test_ft_isalpha();
 	test_ft_isdigit();
 	test_ft_isalnum();
 	test_ft_isascii();
 	test_ft_strlen();
 	test_ft_strncmp();
+	
 }
