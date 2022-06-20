@@ -20,6 +20,7 @@ SRC = 	ft_atoi.c\
 		ft_putstr_fd.c\
 		ft_strchr.c\
 		ft_strdup.c\
+		ft_strjoin.c\
 		ft_strlcpy.c\
 		ft_strlen.c\
 		ft_strncmp.c
