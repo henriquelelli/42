@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hcesar-l <hcesar-l@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/19 20:37:43 by hcesar-l          #+#    #+#             */
-/*   Updated: 2022/06/20 19:49:13 by hcesar-l         ###   ########.fr       */
+/*   Created: 2022/06/20 19:30:58 by hcesar-l          #+#    #+#             */
+/*   Updated: 2022/06/20 19:55:42 by hcesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned char	*s1_aux;
-	unsigned char	*s2_aux;
-	
-	s1_aux = (unsigned char *)dest;
-	s2_aux = (unsigned char *)src;
-	if (src < dest)
-	{
-		while (n--)
-			s1_aux[n] = s2_aux[n];
-	}
-	return (ft_memcpy(dest, src, n));
+	char	*aux;
+
+	aux = ft_itoa(n);
+	while(*aux)
+		write(fd, aux++, 1);
 }

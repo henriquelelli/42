@@ -6,11 +6,13 @@
 /*   By: hcesar-l <hcesar-l@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 20:15:15 by hcesar-l          #+#    #+#             */
-/*   Updated: 2022/06/20 16:39:32 by hcesar-l         ###   ########.fr       */
+/*   Updated: 2022/06/20 19:48:44 by hcesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dest, const void *src, int c, size_t n)
+#include "libft.h"
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char	*str_src;
 	unsigned char	*str_dest;
