@@ -6,7 +6,7 @@
 /*   By: hcesar-l <hcesar-l@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 20:37:43 by hcesar-l          #+#    #+#             */
-/*   Updated: 2022/06/19 20:54:13 by hcesar-l         ###   ########.fr       */
+/*   Updated: 2022/06/19 22:30:20 by hcesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,5 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		while (n--)
 			s1_aux[n] = s2_aux[n];
 	}
-	else
-		ft_memcpy(dest, src, n);
-	return (dest);
+	return ft_memcpy(dest, src, n);
 }
