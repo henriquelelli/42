@@ -6,14 +6,14 @@
 /*   By: hcesar-l <hcesar-l@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:45:08 by hcesar-l          #+#    #+#             */
-/*   Updated: 2022/06/19 01:44:44 by hcesar-l         ###   ########.fr       */
+/*   Updated: 2022/06/20 21:35:05 by hcesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ctype.h>
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
+#include <bsd/string.h>
 #include "libft.h"
 
 void	test_ft_isalpha(void)

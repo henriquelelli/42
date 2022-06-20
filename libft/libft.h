@@ -6,7 +6,7 @@
 /*   By: hcesar-l <hcesar-l@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 21:06:31 by hcesar-l          #+#    #+#             */
-/*   Updated: 2022/06/20 21:12:01 by hcesar-l         ###   ########.fr       */
+/*   Updated: 2022/06/20 21:51:00 by hcesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ void	ft_putstr_fd(char const *s, int fd);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s1);
 char	*ft_strjoin(char const *s1, char const *s2);
+size_t	ft_strlcat(char *dest, char *src, size_t size);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlen(const char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
