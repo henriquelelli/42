@@ -27,7 +27,9 @@ SRC = 	ft_atoi.c\
 		ft_strmapi.c\
 		ft_strncmp.c\
 		ft_strnstr.c\
-		ft_strtrim.c
+		ft_strrchr.c\
+		ft_strtrim.c\
+		ft_substr.c
 
 OBJ = $(SRC:.c=.o)
 
