@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hcesar-l <hcesar-l@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/21 00:04:12 by hcesar-l          #+#    #+#             */
-/*   Updated: 2022/06/21 01:13:37 by hcesar-l         ###   ########.fr       */
+/*   Created: 2022/06/21 00:31:12 by hcesar-l          #+#    #+#             */
+/*   Updated: 2022/06/21 01:14:36 by hcesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	unsigned int	i;
-	char			*str;
+	size_t	little_size;
+	size_t	i;
 
-	if (!s)
-		return (NULL);
-	str = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
-	if (str == NULL)
-		return (NULL);
 	i = 0;
-	while (s[i])
+	little_size = ft_strlen(little);
+	if (!(*little))
+		return ((char *)big);
+	while (*big && (i < len))
 	{
-		str[i] = f(i, s[i]);
+		if ((ft_strncmp(big, little, little_size) == 0)
+			&& (i + little_size <= len))
+			return ((char *)big);
+		big++;
 		i++;
 	}
-	str[i] = '\0';
-	return (str);
+	return (NULL);
 }
