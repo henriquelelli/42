@@ -6,7 +6,7 @@
 /*   By: hcesar-l <hcesar-l@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 22:58:09 by hcesar-l          #+#    #+#             */
-/*   Updated: 2022/06/19 23:16:11 by hcesar-l         ###   ########.fr       */
+/*   Updated: 2022/06/23 20:22:44 by hcesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	*ptr;
-	size_t	tot_size;
+	void	*mem_blk;
+	int		blk_size;
 
-	tot_size = nmemb * size;
-	ptr = malloc(tot_size);
-	if (!ptr || (tot_size > 2147483647))
+	blk_size = nmemb * size;
+	if (!blk_size || ((blk_size / size) != nmemb))
 		return (NULL);
-	ft_bzero(ptr, tot_size);
-	return ((void *)ptr);
+	mem_blk = malloc(blk_size);
+	if (!mem_blk)
+		return (NULL);
+	ft_bzero(mem_blk, blk_size);
+	return (mem_blk);
 }

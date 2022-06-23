@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strteri.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hcesar-l <hcesar-l@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/19 20:37:43 by hcesar-l          #+#    #+#             */
-/*   Updated: 2022/06/21 22:33:59 by hcesar-l         ###   ########.fr       */
+/*   Created: 2022/06/21 19:01:20 by hcesar-l          #+#    #+#             */
+/*   Updated: 2022/06/21 22:29:15 by hcesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	unsigned char	*s1_aux;
-	unsigned char	*s2_aux;
+	unsigned int	i;
 
-	s1_aux = (unsigned char *)dest;
-	s2_aux = (unsigned char *)src;
-	if (src < dest)
+	i = 0;
+	while (s[i])
 	{
-		while (n--)
-			s1_aux[n] = s2_aux[n];
+		f(i, &s[i]);
+		i++;
 	}
-	else
-		ft_memcpy(dest, src, n);
-	return ((void *)s1_aux);
 }

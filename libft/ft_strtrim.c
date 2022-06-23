@@ -6,7 +6,7 @@
 /*   By: hcesar-l <hcesar-l@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 01:24:22 by hcesar-l          #+#    #+#             */
-/*   Updated: 2022/06/21 17:29:42 by hcesar-l         ###   ########.fr       */
+/*   Updated: 2022/06/22 00:21:40 by hcesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (s1 == NULL || set == NULL)
 		return (NULL);
-	while (*s1 && ft_strchr(set, *s1))
+	while (ft_strchr(set, *s1) && *s1)
 		s1++;
 	len = ft_strlen(s1);
-	while (len && ft_strchr(set, s1[len]))
+	while (ft_strchr(set, s1[len - 1]))
 		len--;
-	return (ft_substr(s1, 0, len + 1));
+	return (ft_substr(s1, 0, len));
 }
