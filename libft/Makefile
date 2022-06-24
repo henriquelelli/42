@@ -37,7 +37,7 @@ SRC = 	ft_atoi.c\
 
 OBJ = $(SRC:.c=.o)
 
-CFLAGS = -Wall -Werror -Wextra -g #lembrar de tirar o gdb
+CFLAGS = -Wall -Werror -Wextra
 
 all: $(NAME)
 

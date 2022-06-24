@@ -6,7 +6,7 @@
 /*   By: hcesar-l <hcesar-l@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 19:41:55 by hcesar-l          #+#    #+#             */
-/*   Updated: 2022/06/21 22:14:03 by hcesar-l         ###   ########.fr       */
+/*   Updated: 2022/06/25 00:33:45 by hcesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,13 @@ static void	str_to_table(char const *s, char c, char **table)
 	size_t	len;
 	size_t	i;
 	size_t	j;
+	size_t	s_len;
 
 	j = 0;
 	i = 0;
 	len = 0;
-	while (i <= ft_strlen(s))
+	s_len = ft_strlen(s);
+	while (i <= s_len)
 	{
 		if (s[i] == c || s[i] == '\0')
 		{
@@ -59,7 +61,7 @@ static void	str_to_table(char const *s, char c, char **table)
 	}
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**table;
 	int		i;
