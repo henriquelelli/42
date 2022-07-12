@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hcesar-l <hcesar-l@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/20 19:30:58 by hcesar-l          #+#    #+#             */
-/*   Updated: 2022/06/22 00:11:49 by hcesar-l         ###   ########.fr       */
+/*   Created: 2022/07/12 17:48:58 by hcesar-l          #+#    #+#             */
+/*   Updated: 2022/07/12 17:49:42 by hcesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,15 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*aux;
-	int		i;
+	unsigned int	nbr;
 
-	i = 0;
-	aux = ft_itoa(n);
-	while (aux[i])
-		write(fd, &aux[i++], 1);
-	free(aux);
+	nbr = n;
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		nbr = n * (-1);
+	}
+	if (nbr >= 10)
+		ft_putnbr_fd(nbr / 10, fd);
+	ft_putchar_fd((nbr % 10) + '0', fd);
 }

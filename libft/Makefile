@@ -37,27 +37,22 @@ SRC = 	ft_atoi.c\
 
 OBJ = $(SRC:.c=.o)
 
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+	ar rcs $(NAME) $@ 
+
 CFLAGS = -Wall -Werror -Wextra
 
 all: $(NAME)
 
-#pesquisar rcs
 $(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ) 
-
-$(OBJ): $(SRC)
-	cc $(CFLAGS) -c $(SRC)
 
 clean:
 	rm -rf $(OBJ)
 
 fclean: clean
-	rm -rf $(NAME) a.out
+	rm -rf $(NAME)
 
 re: fclean all
 
-#lembrar de tirar
-teste: re
-	cc $(CFLAGS) main.c $(NAME) && ./a.out
-
-.PHONY: all clean fclean re teste
+.PHONY: all clean fclean re

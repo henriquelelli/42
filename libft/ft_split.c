@@ -6,7 +6,7 @@
 /*   By: hcesar-l <hcesar-l@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 19:41:55 by hcesar-l          #+#    #+#             */
-/*   Updated: 2022/06/25 00:33:45 by hcesar-l         ###   ########.fr       */
+/*   Updated: 2022/07/12 16:22:52 by hcesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,8 @@ char	**ft_split(char const *s, char c)
 	char	**table;
 	int		i;
 
+	if (!s)
+		return (NULL);
 	i = count_string(s, c);
 	table = malloc(sizeof(char *) * (i + 1));
 	if (table == NULL)

@@ -6,7 +6,7 @@
 /*   By: hcesar-l <hcesar-l@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 17:42:30 by hcesar-l          #+#    #+#             */
-/*   Updated: 2022/06/21 17:48:14 by hcesar-l         ###   ########.fr       */
+/*   Updated: 2022/07/12 18:03:04 by hcesar-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@ int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		c += 32;
-	return (c);
+	return ((unsigned char)c);
 }
